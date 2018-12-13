@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
-import {signup} from '../../services/auth'
+import {signup, login} from '../../services/auth'
 
 class AuthPage extends Component {
 
@@ -19,6 +19,23 @@ class AuthPage extends Component {
                 console.log(e)
             })
     }
+
+    login=(e)=>{
+        e.preventDefault()
+        const {user} = this.state
+        login(user)
+            .then(r=>{
+                localStorage.setItem('loggedUser',JSON.stringify(r))
+                console.log('logueado',r)
+                this.props.history.push('/profile')
+                
+            }).catch(e=>{
+                console.log(e)
+            })
+
+    }
+
+
     handleText=(e)=>{
         const {user} = this.state
         const field = e.target.name
@@ -32,7 +49,9 @@ class AuthPage extends Component {
       <div>
         <div>
             {pathname==='/login'?
-            <LoginForm/>
+            <LoginForm
+                login={this.login}
+                handleText={this.handleText}/>
             :
             <SignupForm 
                 signup={this.signup}

@@ -10,7 +10,22 @@ export const signup = (user) => {
 }
 
 //login
+export const login = (user) =>{
+    return axios.post(host+'/login', user,{withCredentials:true})
+        .then(r=>r.data)
+        .catch(e=>e.response)
+}
 
 //logout
 
 //profile
+
+export const getProfile = () =>{
+    return axios.get(host+'/profile',{withCredentials:true})
+        .then(r=>r.data)
+        .catch(e=>{
+            console.log(e)
+            return e.response
+            
+        })
+}

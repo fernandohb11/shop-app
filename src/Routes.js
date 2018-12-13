@@ -4,6 +4,7 @@ import Home from './components/home/Home';
 import AddAuthor from './components/authors/AddAuthor';
 import AuthorList from './components/authors/AuthorList';
 import AuthPage from './components/auth/AuthPage'
+import ProfilePage from './components/authors/ProfilePage';
 
 
 const Routes = () => (
@@ -14,6 +15,7 @@ const Routes = () => (
 
     <Route path="/signup" component={AuthPage}/>
     <Route path="/login" component={AuthPage}/>
+    <Route path="/profile" component={ProfilePage}/>
   </Switch>
 )
 

@@ -13,12 +13,13 @@ class AddAuthor extends Component {
     const name = this.state.name;
     const nationallity = this.state.nationallity;
     axios.post('http://localhost:3000/api/authors', { name, nationallity })
-      .then(
+      .then(()=> {
+        this.props.getData();
         this.setState({
           name: '',
           nationallity: ''
         }
-        ))
+        )})
       .catch(e => console.log)
 
 

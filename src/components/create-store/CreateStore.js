@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import StoreDetails from './StoreDetails'
+import ItemDetails from './ItemDetails'
 
 class CreateStore extends Component {
   state = {
@@ -49,8 +50,14 @@ handleChange = input => e => {
            />
       )
       case 2:
-      return <h1>ITEM DETAILS</h1>
-
+      return (
+          <ItemDetails
+              nextStep = {this.nextStep}
+              prevStep = {this.prevStep}
+              handleChange = {this.handleChange}
+              values = {values}
+              />
+      )
       case 3:
       return <h1>Confirm</h1>
 

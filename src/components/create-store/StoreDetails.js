@@ -21,7 +21,7 @@ export class StoreDetails extends Component {
         <React.Fragment>
         
        <form>
-        <Input id='titulo' placeholder='Ingresa el Titulo' defaultValue={values.titulo} onChange={this.props.handleChange('titulo') } />
+        <Input id='titulo' placeholder='Ingresa el Nombre de tu tienda' defaultValue={values.titulo} onChange={this.props.handleChange('titulo') } />
         <br/>
         <Input id='descripcion' placeholder='Ingresa la Descripción' defaultValue={values.descripcion} onChange={this.props.handleChange('descripcion') } />
         <br/>

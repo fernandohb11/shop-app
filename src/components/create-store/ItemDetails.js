@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Input, Upload, Icon, message } from 'antd';
+import { Input } from 'antd';
 
 
 
@@ -75,9 +75,9 @@ export class ItemDetails extends Component {
         onChange={this.props.handleChange('categorias') } />
         
         <br/>
-
+        <button onClick={this.back}>Regresar</button>
        <button onClick={this.continue}>Continuar</button>
-       <button onClick={this.back}>Regresar</button>
+       
        </form>
        
 

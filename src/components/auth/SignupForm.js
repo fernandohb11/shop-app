@@ -17,7 +17,7 @@ const SignupForm = ({signup, handleText}) => {
             Password:
             <input type="password" name="password"  onChange={handleText}/>
         </p>
-        <button type="submit">Registrate 🔥</button>
+        <button type="submit">Registrate </button>
       </form>
     </div>
   )

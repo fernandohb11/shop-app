@@ -32,10 +32,7 @@ class AuthPage extends Component {
             }).catch(e=>{
                 console.log(e)
             })
-
     }
-
-
     handleText=(e)=>{
         const {user} = this.state
         const field = e.target.name

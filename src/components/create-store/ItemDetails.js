@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { Input } from 'antd';
+import { Input, Button } from 'antd';
 
 
 
 
 
 export class ItemDetails extends Component {
+  componentDidMount () {
+    window.scroll(0, 0)
+  }
   continue = e =>{
     e.preventDefault();
     this.props.nextStep();
@@ -22,7 +25,9 @@ export class ItemDetails extends Component {
   render() {
     const { values } = this.props
     return (
-      <div>
+      <div style={{backgroundColor:"#f5f5f5", marginTop:"-47px"}}>
+      <div className="form-detail">
+      <h2>Agrega un producto</h2>
         <React.Fragment>
         
        <form>
@@ -75,8 +80,8 @@ export class ItemDetails extends Component {
         onChange={this.props.handleChange('categorias') } />
         
         <br/>
-        <button onClick={this.back}>Regresar</button>
-       <button onClick={this.continue}>Continuar</button>
+          <button className="btn" style={{marginRight:"20px"}} onClick={this.back}>Regresar</button>
+          <button className="btn-rosa" onClick={this.continue}>Continuar</button>
        
        </form>
        
@@ -84,7 +89,7 @@ export class ItemDetails extends Component {
         </React.Fragment>
     </div>
 
-    
+    </div>
 
     )
     

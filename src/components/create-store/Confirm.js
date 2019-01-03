@@ -23,7 +23,8 @@ export class Confirm extends Component {
  
     const { values : {tituloShop, descripcionShop, emailShop, phoneShop, categoriasShop}}= this.props
     return (
-      <div>
+      <div style={{backgroundColor:"#f5f5f5", marginTop:"-47px"}}>
+      <div className="form-detail">
         <React.Fragment>
         
        <Form>
@@ -49,15 +50,15 @@ export class Confirm extends Component {
         <br/>
 
         <br/>
-        <button onClick={this.back}>Regresar</button>
-       <button onClick={this.continue}>Continuar</button>
+        <button className="btn" style={{marginRight:"20px"}} onClick={this.back}>Regresar</button>
+       <button className="btn-rosa" onClick={this.continue}>Continuar</button>
        
        </Form>
        
 
         </React.Fragment>
     </div>
-
+  </div>
     
 
     )

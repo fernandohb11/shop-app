@@ -4,7 +4,7 @@ import './App.css';
 import Routes from './Routes';
 import {Link} from 'react-router-dom'
 import 'antd/dist/antd.css';
-
+import Footer from './components/home/Footer'
 
 import { Layout, Menu, Input} from 'antd';
 const { Header,  } = Layout;
@@ -43,39 +43,8 @@ class App extends Component {
           
         </nav>
         <Routes />
-        <br/>
-<footer style={{   display:'flex', flexWrap:'wrap', justifyContent:'space-evenly' }}>
-  
 
-<div>
-
-<h2>¿Necesitas ayuda? </h2>
-
-<p>Mi cuenta</p>
-<p>Preguntas frecuentes</p>
-</div>
-
-<div>
-
-<h2>Sobre Kichink</h2>
-                    <p class="footer-links"><a href="http://expert.kichink.com" title="Servicios Especiales" alt="Servicios Especiales">Servicios Especiales</a></p>
-                    <p class="footer-links"><a href="#" data-toggle="modal" data-target="#modal-select-country" title="¿Cómo funciona?" alt="¿Cómo funciona?">¿Cómo funciona?</a></p>
-                    <p class="footer-links"><a href="http://faqs.kichink.com/" title="¿Cómo comprar?" alt="¿Cómo comprar?">¿Cómo comprar?</a></p>
-                    <p class="footer-links"><a href="http://blog.kichink.com/category/ecommerce-seguro" title="Seguridad" alt="Seguridad">Seguridad</a></p>                
-</div>
-
-<div>
-<h2>¿Necesitas ayuda? </h2>
-<p>Mi cuenta</p>
-<p>Preguntas frecuentes</p>
-</div>
-
-
-
-
-
-
-    </footer>
+        <Footer />
       </div>
     );
   }

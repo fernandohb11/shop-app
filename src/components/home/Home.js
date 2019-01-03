@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'antd/dist/antd.css';
-import { Card, Button} from 'antd';
+import { Button} from 'antd';
 import '../../App.css';
+import Card from '../card/Card.js';
 import homeimg1 from '../../img/home1.jpg'
 import homeimg2 from '../../img/home2.jpg'
 import homeimg3 from '../../img/home3.jpg'
@@ -28,56 +29,18 @@ const Home = () => (
         </div>
         
     <Link to='/Create-store'>
-      <Button  type="danger" style={{ marginTop:'15px', width:'150px', height:'50px'}}>Crear</Button>
-      </Link>
-
-
-      <h2 style={{textAlign: 'left', marginLeft:'35px', fontSize:'30px', fontFamily:'Futura', fontWeight:'lighter'}}>Tiendas Top</h2>
-        <div style={{ background: '#ECECEC',  display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', paddingBottom:'40px'}}>
-    
-         
-
-    <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} src={homeimg1}/>}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Card>
-
-  
-    <Card title="Card title" style={{width:'300px', marginTop:'20px'}}   hoverable={true} cover={  <img style={{maxHeight:'200px'}} src={homeimg2}/>}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Card>
-  
-  
-  
-    <Card title="Card title" style={{width:'300px', marginTop:'20px'}}   hoverable={true} cover={ <img style={{maxHeight:'200px'}} src={homeimg3}/>}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Card>
-  
-
-  
-    <Card title="Card title" style={{width:'300px', marginTop:'20px'}}   hoverable={true} cover={ <img style={{maxHeight:'200px'}} src={homeimg4}/>}>
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Card>
-    <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} src={homeimg5}/>}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Card>
-
-  
-    <Card title="Card title" style={{width:'300px', marginTop:'20px'}}   hoverable={true} cover={  <img style={{maxHeight:'200px'}} src={homeimg6}/>}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Card>
-  
-  
-  
-    <Card title="Card title" style={{width:'300px', marginTop:'20px'}}   hoverable={true} cover={ <img style={{maxHeight:'200px'}} src={homeimg7}/>}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Card>
-  
-
-  
-    <Card title="Card title" style={{width:'300px', marginTop:'20px', }}   hoverable={true} cover={ <img style={{maxHeight:'200px'}} src={homeimg8}/>}>
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </Card>
-
+      <Button className="btn" style={{ marginTop:'15px', width:'150px', height:'50px'}}>Crear</Button>
+    </Link>
+    <div style={{background: "#ECECEC", marginTop:"40px"}}>
+        <div className="banner-back">
+            <h2 style={{textAlign: 'left', marginLeft:'35px', fontSize:'30px', fontFamily:'Futura', fontWeight:'lighter'}}>Tiendas Top</h2>
+        </div>
+       <div className="products">
+        <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', paddingBottom:'40px'}}>
+        
+          <Card />
+        </div>
+    </div>
 </div>
 
 

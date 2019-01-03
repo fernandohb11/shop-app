@@ -11,7 +11,7 @@ class CreateStore extends Component {
     descripcionShop:'',
     precio:'',
     imagenes:[],
-    categorias:[]
+    categoriasShop:[]
   }
 
 //Siguiente paso
@@ -31,12 +31,19 @@ prevStep = () => {
 }
 
 // manejar el cambio de campos
+
+handleSelectChange = value => {
+  const { categoriasShop } =this.state;
+
+  console.log(value)
+  categoriasShop.push(value)
+  this.setState({categoriasShop});
+}
+
 handleChange = input => e => {
   this.setState({[input]:e.target.value});
 }
-handleChange(event) {
-  this.setState({value: event.target.value});
-}
+
 
 
   render() {
@@ -63,6 +70,7 @@ handleChange(event) {
          <StoreDetails
           nextStep = {this.nextStep}
           handleChange = {this.handleChange}
+          handleSelectChange= {this.handleSelectChange}
           values = {values}
            />
       )

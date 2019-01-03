@@ -16,21 +16,14 @@ export class Instructions extends Component {
 
 
     return (
-      <div>
+      <div style={{marginBottom: "40px"}}>
         <div className='bannerStoreDetails'>
         
         <div className='banner'>
      
         </div>
         </div>
-
-
-      
-        
-     
-
-    
-       <Button onClick={this.continue} type="danger" block>Comenzar</Button>
+       <Button onClick={this.continue} className="btn-rosa"  block>Comenzar</Button>
     </div>
 
     

@@ -20,18 +20,26 @@ class AuthPage extends Component {
             })
     }
 
-    login=(e)=>{
+    login = (e) => {
+        const { user } = this.state
         e.preventDefault()
-        const {user} = this.state
         login(user)
-            .then(r=>{
-                localStorage.setItem('loggedUser',JSON.stringify(r))
-                console.log('logueado',r)
-                this.props.history.push('/profile')
+        .then(r => {
+            console.log(r)
+            if(r.status === 500 || r.status === 404 )
+            {
+                console.log('Revisar Contraseña')
+                alert('Contraseña Incorrecta')
                 
-            }).catch(e=>{
-                console.log(e)
-            })
+            }
+            else{
+                localStorage.setItem('loggedUser', JSON.stringify(r))
+                this.props.history.push('/profile')
+            }
+          
+         
+        })
+        .catch(e => console.log(e))
     }
     handleText=(e)=>{
         const {user} = this.state

@@ -2,6 +2,7 @@ import React, { Component} from 'react'
 import StoreDetails from './StoreDetails'
 import ItemDetails from './ItemDetails'
 import Instructions from './Instructions'
+import { Confirm } from './Confirm';
 
 class CreateStore extends Component {
   state = {
@@ -75,8 +76,12 @@ handleChange(event) {
               />
       )
       case 4:
-      return <h1>Confirm</h1>
-
+      return ( <Confirm
+        nextStep = {this.nextStep}
+        prevStep = {this.prevStep}
+        handleChange = {this.handleChange}
+        values = {values}
+        />)
       case 5:
       return <h1>Success</h1>
       } 

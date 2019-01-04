@@ -39,10 +39,10 @@ export class ItemDetails extends Component {
         <br/>
 
         <Input 
-        id='descripcion' 
+        id='description' 
         placeholder='Ingresa la Descripción' 
-        defaultValue={values.descripcion} 
-        onChange={this.props.handleChange('descripcion') } />
+        defaultValue={values.description} 
+        onChange={this.props.handleChange('description') } />
         
         <br/>
         

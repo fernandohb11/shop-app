@@ -3,15 +3,21 @@ import StoreDetails from './StoreDetails'
 import ItemDetails from './ItemDetails'
 import Instructions from './Instructions'
 import { Confirm } from './Confirm';
+import Success from './Success';
 
 class CreateStore extends Component {
   state = {
     step: 1,
     tituloShop:'',
-    descripcionShop:'',
-    precio:'',
-    imagenes:[],
-    categoriasShop:[]
+    descriptionShop:'',
+    tituloItem:'',
+    descriptionItem:'',
+    precioItem:'',
+    categoriasItem:'',
+    piezasItem:'',
+    envioItem:'',
+    categoriasItem:'',
+    succes:false
   }
 
 //Siguiente paso
@@ -42,6 +48,7 @@ handleSelectChange = value => {
 
 handleChange = input => e => {
   this.setState({[input]:e.target.value});
+  // console.log(this.state)
 }
 
 
@@ -50,8 +57,8 @@ handleChange = input => e => {
 
     //////
     const { step } = this.state;
-    const {tituloShop, descripcionShop, emailShop, phoneShop, categoriasShop} = this.state;
-    const values ={tituloShop, descripcionShop, emailShop, phoneShop, categoriasShop}
+    const {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop} = this.state;
+    const values ={tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop}
 
      switch (step) {
       case 1:
@@ -91,7 +98,7 @@ handleChange = input => e => {
         values = {values}
         />)
       case 5:
-      return <h1>Success</h1>
+      return <Success/>
       } 
   }
 }

@@ -199,7 +199,7 @@ section{
 }
 .banner-back{
   background-color: white;
-  height: 100px;
+
   display: flex;
   align-items: flex-end;
 }
@@ -212,6 +212,4 @@ section{
 .footer h2{
   color:#7bdad5;
 }
-.footer a{
-  
-}
+

@@ -21,9 +21,6 @@ class AddAuthor extends Component {
         }
         )})
       .catch(e => console.log)
-
-
-
   }
 
   handleChange = (event) => {

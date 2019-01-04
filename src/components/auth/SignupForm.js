@@ -3,8 +3,8 @@ import {Icon, Item, Form, Input,Button} from 'antd';
 
 const SignupForm = ({signup, handleText}) => {
   return (
-    <div>
-    
+    <div style={{backgroundColor:"#f5f5f5", marginTop:"-47px"}}>
+    <div className="form-detail">
       <Form method="POST" onSubmit={signup}>
       <Form.Item>
       <Input type="text" name="userName" onChange={handleText}  prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
@@ -16,10 +16,13 @@ const SignupForm = ({signup, handleText}) => {
       <Input  type="password" name="password"  onChange={handleText} prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password"/>
       </Form.Item>
       <Form.Item>
+      <Input  type="password2" name="password2"  onChange={handleText} prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Please confirm your password"/>
+      </Form.Item>
+      <Form.Item>
       <Input  type="text" name="name"  onChange={handleText} prefix={<Icon type="smile" style={{ color: 'rgba(0,0,0,.25)' }} />}  placeholder="Name"/>
       </Form.Item>
-      <button type="submit">Registrate </button>
-      </Form>
+      <button className="btn-rosa"type="submit">Registrate </button>
+      </Form></div>
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Input, Form, Select, Button} from 'antd';
+import { Input, Form, Select} from 'antd';
 
 
 
-
+const { TextArea } = Input;
 
 export class StoreDetails extends Component {
 
@@ -32,11 +32,12 @@ export class StoreDetails extends Component {
         defaultValue={values.tituloShop} 
         onChange={this.props.handleChange('tituloShop') } />
        
-        <Input 
-        id='descripcionShop' 
+        <TextArea 
+        autosize={{ minRows: 4, maxRows: 6 }}
+        id='descriptionShop' 
         placeholder='Ingresa la Descripción de tu tienda' 
-        defaultValue={values.descripcionShop} 
-        onChange={this.props.handleChange('descripcionShop') } />
+        defaultValue={values.descriptionShop} 
+        onChange={this.props.handleChange('descriptionShop') } />
    
         <Input 
         id='emailShop' 

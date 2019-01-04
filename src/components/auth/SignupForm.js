@@ -1,5 +1,5 @@
 import React from 'react'
-import {Icon, Item, Form, Input,Button} from 'antd';
+import {Icon, Form, Input} from 'antd';
 
 const SignupForm = ({signup, handleText}) => {
   return (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Input, Button } from 'antd';
+import { Input } from 'antd';
 
 
 
@@ -33,53 +33,47 @@ export class ItemDetails extends Component {
        <form>
         <Input id='titulo' 
         placeholder='Ingresa el Titulo del artículo' 
-        defaultValue={values.titulo} 
-        onChange={this.props.handleChange('titulo') } />
+        defaultValue={values.tituloItem} 
+        onChange={this.props.handleChange('tituloItem') } />
 
         <br/>
 
         <Input 
         id='description' 
         placeholder='Ingresa la Descripción' 
-        defaultValue={values.description} 
-        onChange={this.props.handleChange('description') } />
+        defaultValue={values.descriptionItem} 
+        onChange={this.props.handleChange('descriptionItem') } />
         
         <br/>
         
          <Input id='precio' 
          placeholder='Ingresa el Precio' 
-         defaultValue={values.precio} 
-         onChange={this.props.handleChange('precio') } />
+         defaultValue={values.precioItem} 
+         onChange={this.props.handleChange('precioItem') } />
         
         <br/>
 
         <Input id='categorias' 
         placeholder='Selecciona las Categorías' 
-        defaultValue={values.categorias} 
-        onChange={this.props.handleChange('categorias') } />
+        defaultValue={values.categoriasItem} 
+        onChange={this.props.handleChange('categoriasItem') } />
         
         <br/>
 
         <Input id='inventario' 
         placeholder='Ingresa el numero de piezas disponibles' 
-        defaultValue={values.inventario} 
-        onChange={this.props.handleChange('categorias') } />
+        defaultValue={values.piezasItem} 
+        onChange={this.props.handleChange('piezasItem') } />
         
         <br/>
 
         <Input id='categorias' 
         placeholder='Selecciona el envio' 
-        defaultValue={values.categorias} 
-        onChange={this.props.handleChange('categorias') } />
+        defaultValue={values.envioItem} 
+        onChange={this.props.handleChange('envioItem') } />
         
         <br/>
 
-        <Input id='categorias' 
-        placeholder='Selecciona las Categorías' 
-        defaultValue={values.categorias} 
-        onChange={this.props.handleChange('categorias') } />
-        
-        <br/>
           <button className="btn" style={{marginRight:"20px"}} onClick={this.back}>Regresar</button>
           <button className="btn-rosa" onClick={this.continue}>Continuar</button>
        

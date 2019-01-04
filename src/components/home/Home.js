@@ -4,14 +4,6 @@ import 'antd/dist/antd.css';
 import { Button} from 'antd';
 import '../../App.css';
 import Card from '../card/Card.js';
-import homeimg1 from '../../img/home1.jpg'
-import homeimg2 from '../../img/home2.jpg'
-import homeimg3 from '../../img/home3.jpg'
-import homeimg4 from '../../img/home4.jpg'
-import homeimg5 from '../../img/home5.jpg'
-import homeimg6 from '../../img/home6.jpg'
-import homeimg7 from '../../img/home7.jpg'
-import homeimg8 from '../../img/home8.jpg'
 
 
 

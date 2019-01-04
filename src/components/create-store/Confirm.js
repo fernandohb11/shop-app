@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {  List,  Form} from 'antd';
-import axios from 'axios';
 import {newStore} from '../../services/stores'
+import {newProduct} from '../../services/product'
+
 import Success from '../create-store/Success'
 
 
@@ -27,14 +28,23 @@ export class Confirm extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(this.props)
+    // values from store
     const values = this.props.values
     const emailShop= values.emailShop;
     const tituloShop = values.tituloShop;
     const descriptionShop =values.descriptionShop;
     const phoneShop= values.phoneShop;
     const store = { descriptionShop, tituloShop, emailShop, phoneShop}
-  
-    console.log(store)
+    // values from items
+    const tituloItem=values.tituloItem;
+    const descriptionItem=values.descriptionItem;
+    const precioItem=values.precioItem;
+    const categoriasItem=values.categoriasItem;
+    const piezasItem=values.piezasItem;
+    const envioItem=values.envioItem;
+    const product = { tituloItem,descriptionItem, precioItem,categoriasItem, piezasItem,envioItem  }
+
+    console.log(product)
 
     newStore(store)
     .then(r=>{
@@ -44,7 +54,19 @@ export class Confirm extends Component {
     }).catch(e=>{
       console.log(e)
     })
+
+    newProduct(product)
+    .then(r=>{
+      console.log(r)
+      this.setState({success:true})
+
+    }).catch(e=>{
+      console.log(e)
+    })
+  
+
   }
+  
 
 
   

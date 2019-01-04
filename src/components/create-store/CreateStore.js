@@ -8,16 +8,16 @@ import Success from './Success';
 class CreateStore extends Component {
   state = {
     step: 1,
+    categoriasShop:[],
     tituloShop:'',
     descriptionShop:'',
     tituloItem:'',
     descriptionItem:'',
     precioItem:'',
-    categoriasItem:'',
     piezasItem:'',
     envioItem:'',
     categoriasItem:'',
-    succes:false
+    success:false
   }
 
 //Siguiente paso
@@ -48,7 +48,7 @@ handleSelectChange = value => {
 
 handleChange = input => e => {
   this.setState({[input]:e.target.value});
-  // console.log(this.state)
+ console.log(this.state)
 }
 
 
@@ -57,8 +57,8 @@ handleChange = input => e => {
 
     //////
     const { step } = this.state;
-    const {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop} = this.state;
-    const values ={tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop}
+    const {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop,tituloItem,descriptionItem,precioItem,piezasItem,envioItem,categoriasItem} = this.state;
+    const values ={tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop, tituloItem,descriptionItem,precioItem,piezasItem,envioItem,categoriasItem}
 
      switch (step) {
       case 1:

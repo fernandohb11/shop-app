@@ -23,12 +23,16 @@ export class StoreDetails extends Component {
       <div style={{backgroundColor:"#f5f5f5", marginTop:"-47px"}}>
       <div className="form-detail">
       
-        <h2>Completa tus datos</h2>
+        
         <React.Fragment>
+        
        <form>
+       <h2>Completa tus datos</h2>
         <Input 
+        
         id='tituloShop' 
-        placeholder='Ingresa el Nombre de tu tienda' 
+        
+        placeholder=' Ingresa el Nombre de tu tienda' 
         defaultValue={values.tituloShop} 
         onChange={this.props.handleChange('tituloShop') } />
        

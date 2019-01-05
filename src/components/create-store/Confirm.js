@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {  List,  Form} from 'antd';
+import {Icon,  List,  Form} from 'antd';
 import {newStore} from '../../services/stores'
 import {newProduct} from '../../services/product'
 
@@ -25,16 +25,20 @@ export class Confirm extends Component {
     this.props.prevStep();
   }
 
+  
+
   handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(this.props)
+    const userId =JSON.parse(localStorage.getItem('loggedUser'))
+
     // values from store
     const values = this.props.values
     const emailShop= values.emailShop;
     const tituloShop = values.tituloShop;
     const descriptionShop =values.descriptionShop;
     const phoneShop= values.phoneShop;
-    const store = { descriptionShop, tituloShop, emailShop, phoneShop}
+    const store = { descriptionShop, tituloShop, emailShop, phoneShop, user:userId._id}
     // values from items
     const tituloItem=values.tituloItem;
     const descriptionItem=values.descriptionItem;
@@ -72,38 +76,73 @@ export class Confirm extends Component {
   
   render() {
  
-    const { values : {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop}}= this.props
+    const { values : {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop, tituloItem,descriptionItem, precioItem,categoriasItem, piezasItem,envioItem }}= this.props
     return (
       <div style={{backgroundColor:"#f5f5f5", marginTop:"-47px"}}>
       <div className="form-detail">
         <React.Fragment>
-        
        <Form onSubmit={Success}> 
+       <h2>Tienda</h2>
         <List.Item>
-        Titulo: {tituloShop} 
+        Nombre de la Tienda: {tituloShop} 
         </List.Item>
         <br/>
         <List.Item>
-        Descripción: {descriptionShop} 
+        Descripción de la Tienda: {descriptionShop} 
         </List.Item>
         <br/>
         <List.Item>
-        Email: {emailShop} 
+        Email de contacto: {emailShop} 
         </List.Item>
         <br/>
         <List.Item>
-        Teléfono: {phoneShop} 
+        Teléfono de contato: {phoneShop} 
         </List.Item>
         <br/>
         <List.Item>
         Categorias: {categoriasShop} 
         </List.Item>
+        </Form>
+
+     
+      <Form onSubmit={Success}> 
+
+      <h2>Producto</h2>
+        <List.Item>
+        Titulo del producto: {tituloItem} 
+        </List.Item>
+        <br/>
+        <List.Item>
+        Descripción del producto: {descriptionItem} 
+        </List.Item>
+        <br/>
+        <List.Item>
+        Precio: {precioItem} 
+        </List.Item>
+        <br/>
+        <List.Item>
+        Categorías: {categoriasItem} 
+        </List.Item>
+        <br/>
+        <List.Item>
+        Stock: {piezasItem} 
+        </List.Item>
+        <br/>
+        <List.Item>
+       Envio: {envioItem} 
+        </List.Item>
+      
+        </Form>
+
+
+        
         <br/>
         <br/>
-        <button className="btn" style={{marginRight:"20px"}} onClick={this.back}>Regresar</button>
-       <button className="btn-rosa" onClick={this.handleFormSubmit} >Confirmar</button>
-       
-       </Form>
+        <div>
+        <button   className="btn" style={{marginRight:"20px"}} onClick={this.back}><Icon type="edit" /> Regresar</button>
+       <button  className="btn-rosa" onClick={this.handleFormSubmit} > <Icon type="check" /> Confirmar</button>
+       </div>
+      
        
        
         </React.Fragment>

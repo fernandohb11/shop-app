@@ -17,6 +17,9 @@
 }
 
 .banner{
+  width:100%;
+  height:100%;
+
   content :url('./img/pasosBannerFull.png' );
   
   
@@ -29,7 +32,9 @@
   background-size: cover;
 }
 
-.bannerhome{
+.bannercito{
+  width: 100%;
+  height:100%;
   content :url('./img/banner.png' );
   
   
@@ -123,10 +128,12 @@ section{
   margin: 50px auto;
   min-height: 60vh;
   padding: 40px 0;
+  
 
 }
 .form-detail input{
   margin: 20px 0;
+  
 }
 
 .btn{

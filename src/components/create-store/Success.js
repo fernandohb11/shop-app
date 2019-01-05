@@ -1,5 +1,8 @@
 import React from 'react'
 import {Alert, Button} from 'antd';
+import myStores from '../my-stores/myStores';
+import {Link} from 'react-router-dom';
+
 
 const Success = () => {
   return (
@@ -11,7 +14,10 @@ const Success = () => {
       showIcon
     />
     <br></br>
+    <Link to="/myStores">
     <Button>Tienda y productos</Button>
+    </Link>
+
     </div>
   )
 }

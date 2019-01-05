@@ -15,9 +15,9 @@ const Home = () => (
 
         <div className='bannerHome'>
         
-        <div className='bannerhome'>
-      
-        </div>
+          <div className='bannercito'>
+        
+          </div>
         </div>
         
     <Link to='/Create-store'>

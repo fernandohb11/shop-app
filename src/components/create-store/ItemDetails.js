@@ -27,10 +27,11 @@ export class ItemDetails extends Component {
     return (
       <div style={{backgroundColor:"#f5f5f5", marginTop:"-47px"}}>
       <div className="form-detail">
-      <h2>Agrega un producto</h2>
         <React.Fragment>
         
        <form>
+       <h2>Agrega un producto</h2>
+
         <Input id='titulo' 
         placeholder='Ingresa el Titulo del artículo' 
         defaultValue={values.tituloItem} 
@@ -46,8 +47,8 @@ export class ItemDetails extends Component {
         
         <br/>
         
-         <Input id='precio' 
-         placeholder='Ingresa el Precio' 
+         <Input id='precio'  
+         placeholder='Ingresa el Precio de tu producto' 
          defaultValue={values.precioItem} 
          onChange={this.props.handleChange('precioItem') } />
         
@@ -67,7 +68,7 @@ export class ItemDetails extends Component {
         
         <br/>
 
-        <Input id='categorias' 
+        <Input id='envio' 
         placeholder='Selecciona el envio' 
         defaultValue={values.envioItem} 
         onChange={this.props.handleChange('envioItem') } />

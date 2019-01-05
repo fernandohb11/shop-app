@@ -7,6 +7,7 @@ import AuthPage from './components/auth/AuthPage'
 // import Signup from './components/signup/Signup'
 import ProfilePage from './components/authors/ProfilePage';
 import CreateStore from './components/create-store/CreateStore';
+import myStores from './components/my-stores/myStores';
 
 
 const Routes = () => (
@@ -18,6 +19,8 @@ const Routes = () => (
     <Route path="/signup" component={AuthPage}/>
     <Route path="/profile" component={ProfilePage}/>
     <Route path="/create-store" component={CreateStore}/>
+    <Route path="/myStores" component={myStores}/>
+
   </Switch>
 )
 

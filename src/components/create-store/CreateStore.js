@@ -4,6 +4,9 @@ import ItemDetails from './ItemDetails'
 import Instructions from './Instructions'
 import { Confirm } from './Confirm';
 import Success from './Success';
+import ImageUploader from '../imageUploader/ImageUploader';
+import {postPost, getPosts, uploadFile} from '../../services/posts'
+
 
 class CreateStore extends Component {
   state = {
@@ -17,7 +20,10 @@ class CreateStore extends Component {
     piezasItem:'',
     envioItem:'',
     categoriasItem:'',
-    success:false
+    success:false,
+    posts:[],
+    post:{}
+    
   }
 
 //Siguiente paso
@@ -50,6 +56,22 @@ handleChange = input => e => {
   this.setState({[input]:e.target.value});
  console.log(this.state)
 }
+
+//manejar imagen 
+handleImage=(e)=>{
+  console.log(e.target.files)
+  const {post} = this.state
+  const file = e.target.files[0]
+  uploadFile(file)
+    .then(link=>{
+// modelo
+      ImageUploader['photoURL'] = link
+      this.setState({ImageUploader})
+      console.log('done')
+    })
+}
+
+
 
 
 

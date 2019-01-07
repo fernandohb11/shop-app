@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom'
 import 'antd/dist/antd.css';
 import Footer from './components/home/Footer'
 
+
+
 import { Layout, Menu, Input} from 'antd';
 const { Header,  } = Layout;
 
@@ -36,13 +38,13 @@ class App extends Component {
      
     </Header>
 
-
-          
-          
+  
           
         </nav>
         <Routes />
 
+      
+          
         <Footer />
       </div>
     );

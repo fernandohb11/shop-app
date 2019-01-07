@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Input } from 'antd';
-
-
-
+import ImageUploader from '../imageUploader/ImageUploader'
 
 
 export class ItemDetails extends Component {
@@ -46,7 +44,11 @@ export class ItemDetails extends Component {
         onChange={this.props.handleChange('descriptionItem') } />
         
         <br/>
-        
+
+
+      {/* Subir imagenes de producto */}
+        <ImageUploader/> 
+
          <Input id='precio'  
          placeholder='Ingresa el Precio de tu producto' 
          defaultValue={values.precioItem} 

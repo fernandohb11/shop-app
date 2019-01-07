@@ -6,7 +6,6 @@ import '../../App.css';
 import Card from '../card/Card.js';
 
 
-
 const Home = () => (
   <div >
     
@@ -23,6 +22,8 @@ const Home = () => (
     <Link to='/Create-store'>
       <Button className="btn" style={{ marginTop:'15px', width:'150px', height:'50px'}}>Crear</Button>
     </Link>
+
+
     <div style={{background: "#ECECEC", marginTop:"40px"}}>
         <div className="banner-back">
             <h2 style={{textAlign: 'left', marginLeft:'35px', fontSize:'30px', fontFamily:'Futura', fontWeight:'lighter'}}>Tiendas Top</h2>

@@ -3,6 +3,7 @@ import { Input, Form, Select} from 'antd';
 
 
 
+
 const { TextArea } = Input;
 
 export class StoreDetails extends Component {
@@ -43,6 +44,8 @@ export class StoreDetails extends Component {
         defaultValue={values.descriptionShop} 
         onChange={this.props.handleChange('descriptionShop') } />
    
+
+        
         <Input 
         id='emailShop' 
         placeholder='Ingresa el email de contacto' 

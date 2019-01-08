@@ -45,28 +45,32 @@ export class Confirm extends Component {
     const precioItem=values.precioItem;
     const categoriasItem=values.categoriasItem;
     const piezasItem=values.piezasItem;
+    const photoURL = values.photoURL;
     const envioItem=values.envioItem;
-    const product = { tituloItem,descriptionItem, precioItem,categoriasItem, piezasItem,envioItem  }
+    const product = { tituloItem,descriptionItem, precioItem,categoriasItem, piezasItem,envioItem,photoURL  }
 
     console.log(product)
 
     newStore(store)
-    .then(r=>{
-      console.log(r)
-      this.setState({success:true})
+    .then(resStore=>{
+      console.log(resStore)
+      //this.setState({ success: true })
+      product['store'] = resStore._id
+      console.log(product)
+      newProduct(product)
+      .then(resProduct=>{
+        console.log(resProduct)
+        this.setState({success:true})
+
+      }).catch(e=>{
+        console.log(e)
+      })
 
     }).catch(e=>{
       console.log(e)
     })
 
-    newProduct(product)
-    .then(r=>{
-      console.log(r)
-      this.setState({success:true})
-
-    }).catch(e=>{
-      console.log(e)
-    })
+    
   
 
   }
@@ -131,6 +135,8 @@ export class Confirm extends Component {
         <List.Item>
        Envio: {envioItem} 
         </List.Item>
+
+       
       
         </Form>
 

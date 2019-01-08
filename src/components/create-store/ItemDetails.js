@@ -18,7 +18,6 @@ export class ItemDetails extends Component {
   }
 
 
-
   
   render() {
     const { values } = this.props
@@ -47,7 +46,11 @@ export class ItemDetails extends Component {
 
 
       {/* Subir imagenes de producto */}
-        <ImageUploader/> 
+        <ImageUploader
+          handleImage={this.props.handleImage}
+          handleSubmit={this.props.handleSubmit}
+          onChange={this.props.handleChange('piezasItem') } 
+        /> 
 
          <Input id='precio'  
          placeholder='Ingresa el Precio de tu producto' 
@@ -65,8 +68,7 @@ export class ItemDetails extends Component {
 
         <Input id='inventario' 
         placeholder='Ingresa el numero de piezas disponibles' 
-        defaultValue={values.piezasItem} 
-        onChange={this.props.handleChange('piezasItem') } />
+        />
         
         <br/>
 

@@ -13,22 +13,22 @@ class Tarjeta extends Component {
   render() {
      return (
       <div style={{ background: '#ECECEC',  display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', paddingBottom:'40px'}}>
-         <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} src={homeimg1}/>}>
+         <Card title="Rhoea" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} alt='1' src={homeimg1}/>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Card>
-          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} src={homeimg2}/>}>
+          <Card title="TeddySugar Co" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} alt='1'src={homeimg2}/>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Card>
-          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} src={homeimg3}/>}>
+          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} alt='1'src={homeimg3}/>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Card>
-          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} src={homeimg4}/>}>
+          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} alt='1'src={homeimg4}/>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Card>
-          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} src={homeimg5}/>}>
+          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} alt='1'src={homeimg5}/>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Card>
-          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} src={homeimg6}/>}>
+          <Card title="Card title" style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={   <img style={{maxHeight:'200px'}} alt='1'src={homeimg6}/>}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Card>
 

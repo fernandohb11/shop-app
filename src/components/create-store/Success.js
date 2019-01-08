@@ -1,6 +1,5 @@
 import React from 'react'
 import {Alert, Button} from 'antd';
-import myStores from '../my-stores/myStores';
 import {Link} from 'react-router-dom';
 
 

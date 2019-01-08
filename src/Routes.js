@@ -8,6 +8,7 @@ import AuthPage from './components/auth/AuthPage'
 import ProfilePage from './components/authors/ProfilePage';
 import CreateStore from './components/create-store/CreateStore';
 import myStores from './components/my-stores/myStores';
+import ItemView from './components/create-store/ItemView';
 
 
 const Routes = () => (
@@ -15,11 +16,14 @@ const Routes = () => (
     <Route exact path="/" component={ Home }/>
     <Route exact path="/api/authors" component={ AuthorList }/>
     {/* <Route path="/signup" component={Signup}/> */}
-    <Route path="/login" component={AuthPage}/>
+    <Route path="/login" component={AuthPage} />
+    <Route path="/logout" component={AuthPage}/>
     <Route path="/signup" component={AuthPage}/>
     <Route path="/profile" component={ProfilePage}/>
     <Route path="/create-store" component={CreateStore}/>
-    <Route path="/myStores" component={myStores}/>
+    <Route path="/myStores" component={myStores} />
+    <Route path="/itemview" component={ItemView}/>
+
 
   </Switch>
 )

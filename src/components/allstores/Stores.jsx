@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import axios from 'axios';
 
 
-export default class myStores extends Component {
+export default class Stores extends Component {
   state= {
       user:{}
   }

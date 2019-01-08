@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Button } from 'antd';
+import {Link, withRouter} from 'react-router-dom'
+import LoginForm from '../auth/LoginForm';
 
 
 
@@ -7,15 +9,31 @@ import { Button } from 'antd';
 
 
 export class Instructions extends Component {
+
+  state={
+    user: {},
+  }
+  
+  componentWillMount() {
+    let user = JSON.parse(localStorage.getItem('loggedUser'))
+    if (!user) return this.props.history.push('/login')
+  }
+
   continue = e =>{
     e.preventDefault();
     this.props.nextStep();
   }
 
-  render() {
 
+  render() {
+    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
+    // if (!loggedUser) this.props.history.push('/login')
 
     return (
+    <React.Fragment>
+     
+       
+        
       <div style={{marginBottom: "40px"}}>
         <div className='bannerStoreDetails'>
         
@@ -27,11 +45,11 @@ export class Instructions extends Component {
     </div>
 
     
-
+    </React.Fragment>
     )
     
   }
 }
 
 
-export default Instructions
+export default withRouter(Instructions)

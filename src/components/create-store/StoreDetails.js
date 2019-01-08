@@ -65,7 +65,8 @@ export class StoreDetails extends Component {
           placeholder="Please select a country" 
           defaultValue={values.categoriasShop} 
           onChange={this.props.handleSelectChange }  >
-            <Select.Option value="china">China</Select.Option>
+                  <Select.Option value="china">China</Select.Option>
+                  <Select.Option value="mexico">Mexico</Select.Option>
             <Select.Option value="usa">U.S.A</Select.Option>
           </Select>
         </Form.Item>

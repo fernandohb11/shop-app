@@ -23,7 +23,8 @@ class CreateStore extends Component {
     posts:[],
     post:{},
     img:"",
-    photoURL:{}
+    photoURL: {},
+    nombreUsuario:''
   }
 //Siguiente paso
 nextStep = () => {
@@ -46,7 +47,8 @@ handleSelectChange = value => {
   this.setState({categoriasShop});
 }
 handleChange = input => e => {
-  this.setState({[input]:e.target.value});
+  this.setState({ [input]: e.target.value });
+
  
 }
 //manejar imagen 
@@ -74,8 +76,8 @@ handleSubmit=(e)=>{
 }
   render() {
     const { step } = this.state;
-    const {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop,tituloItem,descriptionItem,precioItem,piezasItem,envioItem,categoriasItem,photoURL} = this.state;
-    const values ={tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop, tituloItem,descriptionItem,precioItem,piezasItem,envioItem,categoriasItem, photoURL}
+    const {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop,tituloItem,descriptionItem,precioItem,piezasItem,envioItem,categoriasItem,photoURL,nombreUsuario} = this.state;
+    const values ={tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop, tituloItem,descriptionItem,precioItem,piezasItem,envioItem,categoriasItem, photoURL, nombreUsuario}
      switch (step) {
       case 1:
       return (

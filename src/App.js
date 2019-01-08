@@ -30,8 +30,10 @@ class App extends Component {
         <Menu.Item key="2"><Link to ="/login">Inicia Sesión</Link></Menu.Item>
         <Menu.Item key="3"><Link to="/signup">Regístrate</Link></Menu.Item>
         <Menu.Item key="4"><Link to="/profile">Perfil</Link></Menu.Item>
-        <Menu.Item key="5"><Link to="/myStores">Mis Tiendas</Link></Menu.Item>
-        <Menu.Item key="6">
+              <Menu.Item key="5"><Link to="/myStores">Mis Tiendas</Link></Menu.Item>
+              <Menu.Item key="6"><Link to="/stores">Tiendas</Link></Menu.Item>
+
+        <Menu.Item key="7">
         <Input defaultValue ='🔍 Busca productos o tiendas'></Input>
         </Menu.Item>
       </Menu>

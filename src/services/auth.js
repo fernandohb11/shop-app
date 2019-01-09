@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const host = 'http://localhost:3000/api'
+const host = 'https://ironbutik.herokuapp.com/api'
 
 //signup
 export const signup = (user) => {

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const host = 'http://localhost:3000/products'
+const host = 'https://ironbutik.herokuapp.com/products'
 
 //create a store
 export const newProduct = (product) => {

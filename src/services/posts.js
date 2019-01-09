@@ -1,7 +1,7 @@
 import axios from 'axios'
 import firebase from './firebase'
 
-let host = 'http://localhost:3000/products/product'
+let host = 'https://ironbutik.herokuapp.com/products/product'
 
 export const getPosts=()=>{
     return axios.get(host)

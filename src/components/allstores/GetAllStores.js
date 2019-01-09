@@ -11,7 +11,7 @@ class GetAllStores extends Component {
   }
 
   getStores = () => {
-    axios.get('http://localhost:3000/store/store')
+    axios.get('https://ironbutik.herokuapp.com/store/store')
       .then(response => {
         this.setState({ list: response.data })
         console.log(response.data)

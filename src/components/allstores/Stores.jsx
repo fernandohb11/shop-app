@@ -21,7 +21,7 @@ export default class Stores extends Component {
   }
 
   getStores = (user) => {
-    axios.get('http://localhost:3000/stores/stores/'+ user)
+    axios.get('https://ironbutik.herokuapp.com/stores/stores/'+ user)
       .then(res => {
         const user = res.data
         this.setState({user})

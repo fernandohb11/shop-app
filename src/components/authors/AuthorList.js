@@ -11,7 +11,7 @@ class AuthorList  extends Component {
   }
 
   getAuthors = () => {
-    axios.get('http://localhost:3000/api/authors')
+    axios.get('https://ironbutik.herokuapp.com/api/authors')
       .then(response => {
         
         this.setState({list: response.data})

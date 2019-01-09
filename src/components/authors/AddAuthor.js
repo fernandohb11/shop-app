@@ -12,7 +12,7 @@ class AddAuthor extends Component {
     event.preventDefault();
     const name = this.state.name;
     const nationallity = this.state.nationallity;
-    axios.post('http://localhost:3000/api/authors', { name, nationallity })
+    axios.post('https://ironbutik.herokuapp.com/api/authors', { name, nationallity })
       .then(()=> {
         this.props.getData();
         this.setState({

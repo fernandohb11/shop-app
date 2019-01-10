@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Card,Icon} from 'antd';
-import {Link} from 'react-router-dom'
+
 import axios from 'axios';
 
 class GetAllStores extends Component {

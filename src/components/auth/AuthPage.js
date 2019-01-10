@@ -29,8 +29,7 @@ class AuthPage extends Component {
             if(r.status === 500 || r.status === 404 )
             {
                 console.log('Revisar Contraseña')
-                alert('Contraseña Incorrecta')
-                
+                alert('Contraseña Incorrecta') 
             }
             else{
                 localStorage.setItem('loggedUser', JSON.stringify(r))

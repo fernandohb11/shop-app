@@ -53,7 +53,7 @@ export default class myStores extends Component {
             <Col key={store._id} span={8}>
               <Card  style={{ width: '300px', marginTop: '30px' }} 
               key={store._id} title={store.tituloShop} bordered={false}>{store.descriptionShop} {store.emailShop} {store.phoneShop}
-                <img src={{width:'100%'}} src={''}/>
+             
                 </Card> 
          </Col>
        </Row>

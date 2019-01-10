@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-const { Meta } = Card;
+
 
 export default class ItemView extends Component {
   state= {
     user: {},
     store: {},
     products: [],
-    loading: true
+    
   }
   componentWillMount() {
  
@@ -38,7 +38,7 @@ export default class ItemView extends Component {
 
   render() {
    
-    const { products, loading} = this.state
+    const { products} = this.state
     return (
       <React.Fragment>
         <div style={{ background: '#ECECEC',  display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', paddingBottom:'40px', width:'100%'}}>
@@ -50,8 +50,8 @@ export default class ItemView extends Component {
                 title={product.tituloItem}
                 
                 bordered={false}>
-                {product.photoURL != "" ?
-                  <img src={product.photoURL} style={{ width: '100%' }} /> : <Button shape="circle" loading />}
+                {product.photoURL !== "" ?
+                  <img alt='foto del product' src={product.photoURL} style={{ width: '100%' }} /> : <Button shape="circle" loading />}
                 <h4> {product.descriptionItem}</h4>
                 <h5> $ {product.precioItem}.00 MXN</h5>
                 <h5> {product.categoriasItem}</h5>

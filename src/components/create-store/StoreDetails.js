@@ -28,7 +28,7 @@ export class StoreDetails extends Component {
         <React.Fragment>
         
        <form>
-       <h2>Completa tus datos</h2>
+       <h2>Completa los datos de contacto para tu tienda</h2>
         <Input 
         
         id='tituloShop' 

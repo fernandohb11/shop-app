@@ -31,21 +31,22 @@ export default class Stores extends Component {
   render() {
     const { user } = this.state
     return (
-        <div style={{ background: '#ECECEC',  display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', paddingBottom:'40px', width:'100%'}}>
+      <div style={{
+        background: '#ECECEC',
+        display: 'flex', flexWrap: 'wrap',
+        justifyContent: 'space-evenly', paddingBottom: '40px',
+        width: '100%'
+      }}>
         {user.stores ? user.stores.map(store => 
           <Link to="/itemview">
-         <Row gutter={16}>
-            <Col span={8}>
+      <Row gutter={16}>
+          <Col span={8}>
               <Card style={{ width: '300px', marginTop: '30px' }} key={store._id} title={store.tituloShop} bordered={false}>{store.descriptionShop} {store.emailShop} {store.phoneShop}
-                </Card> 
-         </Col>
-       </Row>
-       </Link> 
-          // <Card key={store._id}title={store.tituloShop} style={{width:'300px', marginTop:'20px'}}  hoverable={true} cover={<img style={{maxHeight:'200px'}} alt='1' src={homeimg1}/>} >{store.descriptionShop} </Card>
+              </Card> 
+          </Col>
+      </Row>
+          </Link> 
         ) :
-          
-          
-       
           <p>No hay elementos </p>} 
       </div>
     )

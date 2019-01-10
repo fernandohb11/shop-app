@@ -78,7 +78,9 @@ handleSubmit=(e)=>{
     const { step } = this.state;
     const {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop,tituloItem,descriptionItem,precioItem,piezasItem,envioItem,categoriasItem,photoURL,nombreUsuario} = this.state;
     const values ={tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop, tituloItem,descriptionItem,precioItem,piezasItem,envioItem,categoriasItem, photoURL, nombreUsuario}
-     switch (step) {
+    switch (step) {
+      default:
+        break;
       case 1:
       return (
          <Instructions

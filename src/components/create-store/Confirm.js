@@ -114,7 +114,7 @@ export class Confirm extends Component {
 
       <h2>Producto</h2>
       <List.Item>
-      <img style={{width:'100%'}} src={photoURL}/> 
+      <img style={{width:'100%'}}  alt='foto de item'src={photoURL}/> 
         </List.Item>
         <List.Item>
         Titulo del producto: {tituloItem} 
@@ -139,20 +139,10 @@ export class Confirm extends Component {
         <List.Item>
        Envio: {envioItem} 
         </List.Item>
-        
-        
-       
-      
         </Form>
-
-</div>
-        
+</div>  
         <br/>
         <br/>
-      
-      
-       
-       
         </React.Fragment>
 <br></br>
         {this.state.success && <Success/>}

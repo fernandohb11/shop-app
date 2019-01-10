@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Input } from 'antd';
-import ImageUploader from '../imageUploader/ImageUploader'
 
 
 export class NewItem extends Component {
@@ -11,9 +10,7 @@ export class NewItem extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(this.props)
-    const userId =JSON.parse(localStorage.getItem('loggedUser'))
-
-    const values = this.props.values
+    
 
     // // values from items
     // const tituloItem=values.tituloItem;
@@ -42,7 +39,7 @@ export class NewItem extends Component {
 
   
   render() {
-    const { values } = this.props
+   
     return (
       <div style={{backgroundColor:"#f5f5f5", marginTop:"-47px"}}>
       <div className="form-detail">

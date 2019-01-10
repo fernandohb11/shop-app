@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button } from 'antd';
-import {Link, withRouter} from 'react-router-dom'
-import LoginForm from '../auth/LoginForm';
+import {withRouter} from 'react-router-dom'
+
 
 
 
@@ -26,8 +26,7 @@ export class Instructions extends Component {
 
 
   render() {
-    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'))
-    // if (!loggedUser) this.props.history.push('/login')
+   
 
     return (
     <React.Fragment>

@@ -10,6 +10,7 @@ import ItemView from './components/create-store/ItemView';
 import GetAllStores from './components/allstores/GetAllStores'
 import StoreDetails from './components/create-store/StoreDetails';
 import Stores from './components/allstores/Stores';
+import { NewItem } from './components/create-store/NewItem';
 
 
 const Routes = () => (
@@ -22,9 +23,10 @@ const Routes = () => (
     <Route path="/profile" component={ProfilePage}/>
     <Route path="/create-store" component={CreateStore}/>
     <Route path="/myStores" component={myStores} />
-    <Route path="/itemview" component={ItemView} />
+    <Route path="/itemview/:id" component={ItemView} />
     <Route path="/allstores" component={GetAllStores} />
     <Route path="/storedetails" component={StoreDetails} />
+    <Route path="/newItem" component={NewItem} />
     <Route path="/stores" component={Stores} />
 
 

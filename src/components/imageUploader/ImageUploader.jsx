@@ -7,7 +7,7 @@ const ImageUploader = ({handleSubmit, handleImage}) => {
   return (
     <div>
       <input onChange={handleImage} type="file" name="photoURL"/>
-      <button onClick={handleSubmit}>Post </button>
+      {/* <button onClick={handleSubmit}>Post </button> */}
     </div>
   )
 }

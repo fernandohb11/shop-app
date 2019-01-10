@@ -6,7 +6,8 @@ import axios from 'axios';
 
 export default class myStores extends Component {
   state= {
-      user:{}
+    user: {},
+    store:{}
   }
   componentWillMount() {
    let {user} = this.state
@@ -24,19 +25,35 @@ export default class myStores extends Component {
     axios.get('https://ironbutik.herokuapp.com/stores/stores/'+ user)
       .then(res => {
         const user = res.data
-        this.setState({user})
+        this.setState({ user })
+        console.log(user)
+    })
+  }
+
+  getProducts = (store) => {
+    axios.get('https://ironbutik.herokuapp.com/products/product/'+ store)
+      .then(res => {
+        const products = res.data
+        this.setState({products})
     })
   }
 
   render() {
+   
     const { user } = this.state
     return (
+      <React.Fragment>
+        <h2>Mis Tiendas</h2>
         <div style={{ background: '#ECECEC',  display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', paddingBottom:'40px', width:'100%'}}>
+       
         {user.stores ? user.stores.map(store => 
-          <Link to="/itemview">
-         <Row gutter={16}>
-            <Col span={8}>
-              <Card style={{ width: '300px', marginTop: '30px' }} key={store._id} title={store.tituloShop} bordered={false}>{store.descriptionShop} {store.emailShop} {store.phoneShop}
+          
+          <Link key={store._id} to={"/itemview/" + store._id}>
+         <Row key={store._id} gutter={16}>
+            <Col key={store._id} span={8}>
+              <Card  style={{ width: '300px', marginTop: '30px' }} 
+              key={store._id} title={store.tituloShop} bordered={false}>{store.descriptionShop} {store.emailShop} {store.phoneShop}
+                <img src={{width:'100%'}} src={''}/>
                 </Card> 
          </Col>
        </Row>
@@ -47,7 +64,7 @@ export default class myStores extends Component {
           
        
           <p>No hay elementos </p>} 
-      </div>
+      </div></React.Fragment>
     )
   }
 }

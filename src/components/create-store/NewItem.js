@@ -3,15 +3,37 @@ import { Input } from 'antd';
 import ImageUploader from '../imageUploader/ImageUploader'
 
 
-export class ItemDetails extends Component {
+export class NewItem extends Component {
   componentDidMount () {
     window.scroll(0, 0)
   }
-  continue = e =>{
-    e.preventDefault();
-    this.props.nextStep();
-  }
 
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(this.props)
+    const userId =JSON.parse(localStorage.getItem('loggedUser'))
+
+    const values = this.props.values
+
+    // // values from items
+    // const tituloItem=values.tituloItem;
+    // const descriptionItem=values.descriptionItem;
+    // const precioItem=values.precioItem;
+    // const categoriasItem=values.categoriasItem;
+    // const piezasItem=values.piezasItem;
+    // const photoURL = values.photoURL;
+    // const envioItem=values.envioItem;
+    // const product = { tituloItem,descriptionItem, precioItem,categoriasItem, piezasItem,envioItem,photoURL  }
+
+    // console.log(product)
+
+   
+
+    
+  
+
+  }
+  
   back = e =>{
     e.preventDefault();
     this.props.prevStep();
@@ -30,59 +52,56 @@ export class ItemDetails extends Component {
        <h2>Agrega un producto</h2>
 
         <Input id='titulo' 
-        placeholder='Ingresa el Titulo del artículo' 
-        defaultValue={values.tituloItem} 
-        onChange={this.props.handleChange('tituloItem') } />
+                placeholder='Ingresa el Titulo del artículo' 
+                
+        
+         />
 
         <br/>
 
         <Input 
         id='description' 
         placeholder='Ingresa la Descripción' 
-        defaultValue={values.descriptionItem} 
-        onChange={this.props.handleChange('descriptionItem') } />
+        
+         />
         
         <br/>
 
 
-      {/* Subir imagenes de producto */}
+      {/* Subir imagenes de producto
         <ImageUploader
           handleImage={this.props.handleImage}
           handleSubmit={this.props.handleSubmit}
-          onChange={this.props.handleChange('piezasItem') } 
-        /> 
+        
+        />  */}
 
          <Input id='precio'  
          placeholder='Ingresa el Precio de tu producto' 
-         defaultValue={values.precioItem} 
-         onChange={this.props.handleChange('precioItem') } />
+         
+      />
         
         <br/>
 
         <Input id='categorias' 
         placeholder='Selecciona las Categorías' 
-        defaultValue={values.categoriasItem} 
-        onChange={this.props.handleChange('categoriasItem') } />
+        
+       />
         
         <br/>
 
         <Input id='inventario' 
                 placeholder='Ingresa el numero de piezas disponibles' 
-                defaultValue={values.piezasItem} 
-        onChange={this.props.handleChange('piezasItem') }
+                
+          
         />
         
         <br/>
 
         <Input id='envio' 
         placeholder='Selecciona el envio' 
-        defaultValue={values.envioItem} 
-        onChange={this.props.handleChange('envioItem') } />
-        
-        <br/>
-
-          <button className="btn" style={{marginRight:"20px"}} onClick={this.back}>Regresar</button>
-          <button className="btn-rosa" onClick={this.continue}>Continuar</button>
+    
+       />
+          <button className="btn-rosa"onClick={this.handleFormSubmit}>Continuar</button>
        
        </form>
        
@@ -97,4 +116,3 @@ export class ItemDetails extends Component {
   }
 }
 
-export default ItemDetails

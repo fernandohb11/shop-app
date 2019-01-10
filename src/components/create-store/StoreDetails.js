@@ -62,12 +62,16 @@ export class StoreDetails extends Component {
    
         <Form.Item onSubmit={this.props.handleChange('categoriasShop')}>
           <Select id='categoriasShop' 
-          placeholder="Please select a country" 
+          placeholder="Porfavor selecciona una categoria" 
           defaultValue={values.categoriasShop} 
           onChange={this.props.handleSelectChange }  >
-                  <Select.Option value="china">China</Select.Option>
-                  <Select.Option value="mexico">Mexico</Select.Option>
-            <Select.Option value="usa">U.S.A</Select.Option>
+                  <Select.Option value="Alimentos y bebidas">Alimentos y bebidas</Select.Option>
+                  <Select.Option value="Arte, diseño y accesorios">Arte, diseño y accesorios</Select.Option>
+                  <Select.Option value="Moda y accesorios">Moda y accesorios</Select.Option>
+                  <Select.Option value="Salud y belleza">Salud y belleza</Select.Option>
+                  <Select.Option value="Deportes y Aire Libre">Deportes y Aire Libre</Select.Option>
+                  <Select.Option value="Tecnología y gadgets">Tecnología y gadgets</Select.Option>
+                  <Select.Option value=" Hogar">Hogar</Select.Option>
           </Select>
         </Form.Item>
 

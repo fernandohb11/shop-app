@@ -18,6 +18,15 @@ class GetAllStores extends Component {
       })
       .catch(e => console.log(e))
   }
+
+  getProducts = () => {
+    axios.get('https://ironbutik.herokuapp.com/products/product')
+      .then(response => {
+        this.setState({ list: response.data })
+        console.log(response.data)
+      })
+      .catch(e => console.log(e))
+  }
     render() {
       console.log(this.state.list)
       return (

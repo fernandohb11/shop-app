@@ -3,7 +3,7 @@ import {Icon,  List,  Form} from 'antd';
 import {newStore} from '../../services/stores'
 import {newProduct} from '../../services/product'
 
-import Success from '../create-store/Success'
+import Success from './Success'
 
 
 
@@ -80,38 +80,42 @@ export class Confirm extends Component {
   
   render() {
  
-    const { values : {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop, tituloItem,descriptionItem, precioItem,categoriasItem, piezasItem,envioItem }}= this.props
+    const { values : {tituloShop, descriptionShop, emailShop, phoneShop, categoriasShop, tituloItem,descriptionItem, precioItem,categoriasItem, piezasItem,envioItem,photoURL }}= this.props
     return (
       <div style={{backgroundColor:"#f5f5f5", marginTop:"-47px"}}>
-      <div className="form-detail">
-        <React.Fragment>
-       <Form onSubmit={Success}> 
-       <h2>Tienda</h2>
-        <List.Item>
-        Nombre de la Tienda: {tituloShop} 
-        </List.Item>
-        <br/>
-        <List.Item>
-        Descripción de la Tienda: {descriptionShop} 
-        </List.Item>
-        <br/>
-        <List.Item>
-        Email de contacto: {emailShop} 
-        </List.Item>
-        <br/>
-        <List.Item>
-        Teléfono de contato: {phoneShop} 
-        </List.Item>
-        <br/>
-        <List.Item>
-        Categorias: {categoriasShop} 
-        </List.Item>
+      <div className="form-detail-success">
+          <React.Fragment>
+          <div className="box-form">
+          <Form  onSubmit={Success}> 
+                <h2>Tienda</h2>
+            <List.Item>
+            Nombre de la Tienda: {tituloShop} 
+            </List.Item>
+            <br/>
+            <List.Item>
+            Descripción de la Tienda: {descriptionShop} 
+            </List.Item>
+            <br/>
+            <List.Item>
+            Email de contacto: {emailShop} 
+            </List.Item>
+            <br/>
+            <List.Item>
+            Teléfono de contato: {phoneShop} 
+            </List.Item>
+            <br/>
+            <List.Item>
+            Categorias: {categoriasShop} 
+            </List.Item>
         </Form>
-
-     
+</div>
+     <div className="box-form">
       <Form onSubmit={Success}> 
 
       <h2>Producto</h2>
+      <List.Item>
+      <img style={{width:'100%'}} src={photoURL}/> 
+        </List.Item>
         <List.Item>
         Titulo del producto: {tituloItem} 
         </List.Item>
@@ -135,26 +139,28 @@ export class Confirm extends Component {
         <List.Item>
        Envio: {envioItem} 
         </List.Item>
-
+        
+        
        
       
         </Form>
 
-
+</div>
         
         <br/>
         <br/>
-        <div>
-        <button   className="btn" style={{marginRight:"20px"}} onClick={this.back}><Icon type="edit" /> Regresar</button>
-       <button  className="btn-rosa" onClick={this.handleFormSubmit} > <Icon type="check" /> Confirmar</button>
-       </div>
+      
       
        
        
         </React.Fragment>
 <br></br>
         {this.state.success && <Success/>}
-    </div>
+        </div>
+        <div style={{paddingBottom:"40px"}}>
+        <button   className="btn" style={{marginRight:"20px"}} onClick={this.back}><Icon type="edit" /> Regresar</button>
+       <button  className="btn-rosa" onClick={this.handleFormSubmit} > <Icon type="check" /> Confirmar</button>
+       </div>
   </div>
     
 

@@ -14,7 +14,7 @@ const Footer = () => {
           <p className="footer-links">Servicios Especiales</p>
           <p className="footer-links">¿Cómo funciona?</p>
           <p className="footer-links">¿Cómo comprar?</p>
-          <p className="footer-links">Seguridad></p>               
+          <p className="footer-links">Seguridad</p>               
         </div>
           
         <div>
@@ -27,10 +27,10 @@ const Footer = () => {
               <p className="footer-links">Twitter</p>
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <p className="footer-links">Instagr</p>
+              <p className="footer-links">Instagram</p>
             </div>
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <p className="footer-links">Pintere</p>
+              <p className="footer-links">Pinterest</p>
             </div>
           </div>  
         </div>

@@ -114,7 +114,7 @@ export class Confirm extends Component {
 
       <h2>Producto</h2>
       <List.Item>
-      <img style={{width:'100px'}}  alt='foto de item'src={photoURL}/> 
+      <img style={{width:'250px', height:'100px'}}  alt='foto de item'src={photoURL}/> 
         </List.Item>
         <List.Item>
         Titulo del producto: {tituloItem} 
